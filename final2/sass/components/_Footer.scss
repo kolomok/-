@@ -1,0 +1,55 @@
+footer {
+  margin-top: 100px;
+}
+
+.SocialIcons {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Konec {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 40px;
+  li {
+    font-size: 20px;
+    color: var(--c1);
+    padding-top: 10px;
+    a {
+      color: var(--c1);
+    }
+  }
+  a:hover {
+    color: yellowgreen;
+  }
+}
+
+.NumTel {
+  font-family: "Unbounded Regural";
+}
+
+.KonecKonec {
+  display: flex;
+  justify-content: space-around;
+  color: var(--c1);
+  font-size: 18px;
+  padding: 40px 0px;
+}
+
+@media (max-width: 1024px) {
+  .form-container {
+    margin-left: -100px;
+    display: flex;
+    flex-direction: column;
+    h1,
+    input,
+    textarea,
+    select,
+    button,
+    p {
+      width: 100px;
+      margin-left: 150px;
+    }
+  }
+}

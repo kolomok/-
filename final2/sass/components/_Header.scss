@@ -1,0 +1,149 @@
+header {
+  padding: 90px 40px;
+}
+
+.Head {
+  display: flex;
+  flex-direction: row;
+}
+.PhotoHead {
+  width: 200px;
+}
+
+.GradientText {
+  font-size: 5.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #cffe06, #27f7f8);
+  background-clip: text;
+  color: transparent;
+  font-family: "Unbounded ExtraBold";
+}
+
+.FirstButton {
+  font-family: "Unbounded Regural";
+  background: linear-gradient(to right, #96f71d, yellow);
+  padding: 15px 21px;
+  @include BorderRadius(2);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.PodH {
+  width: 580px;
+  font-size: 36px;
+}
+
+.Background {
+  box-shadow: 300px 300px 300px 250px yellowgreen;
+  width: 0px;
+  height: 0px;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.Head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15vw;
+  color: var(--c1);
+}
+
+.Sun {
+  margin-left: 500px;
+}
+
+.ticker {
+  width: 100%;
+  overflow-x: hidden;
+}
+.ticker__in {
+  margin: 200px 0px 0px 0px;
+  display: flex;
+  gap: 100px;
+  justify-content: space-around;
+  width: 100%;
+  animation: marquee 10s infinite linear;
+  img {
+    object-fit: cover;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+#signup,
+#Zayavka {
+  margin: auto;
+  @include BorderRadius(1);
+  background: repeating-radial-gradient(yellow, green);
+  width: 50vw;
+}
+#signup::backdrop {
+  backdrop-filter: blur(3px);
+}
+
+#Zayavka::backdrop {
+  backdrop-filter: blur(3px);
+}
+
+.SignupForm {
+  .EndBut {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    h1 {
+      font-family: "Unbounded Bold";
+      font-size: 40px;
+    }
+  }
+  input,
+  textarea {
+    background-color: var(--bg1);
+    padding: 20px;
+    @include BorderRadius(1);
+    resize: none;
+    color: var(--c1);
+  }
+  button {
+    background-color: #27f7f8;
+    padding: 10px;
+    @include BorderRadius(1);
+  }
+  .End {
+    padding: 10px 15px;
+    color: red;
+    font-weight: 900;
+    font-family: "Unbounded ExtraBold";
+  }
+}
+
+.form-container {
+  button {
+    background-color: white;
+    padding: 10px;
+    color: black;
+    @include BorderRadius(1);
+  }
+  .End {
+    padding: 10px 15px;
+    color: red;
+    font-weight: 900;
+    font-family: "Unbounded ExtraBold";
+  }
+}

@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish Regular", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+  background: inherit;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #172224;
+}
+
+nav,
+header,
+main,
+footer {
+  max-width: 1600px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .Head {
+    flex-direction: column;
+    margin-bottom: 1000px;
+  }
+  .Telefone {
+    .PhoneCall {
+      display: none;
+    }
+  }
+  .form-container {
+    margin-left: -90px;
+  }
+  .Zayava {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Menu {
+    display: none;
+  }
+  .Burger2 {
+    display: block;
+  }
+  .SvgSun {
+    display: none;
+  }
+  .ImgGirl {
+    display: block;
+    @include BorderRadius(3);
+  }
+  .ImgGirl2 {
+    display: none;
+  }
+  .GirlInfo {
+    height: 1000px;
+  }
+  .TextImg {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .annotation {
+    .Text {
+      width: 10px;
+    }
+
+    .Zayava {
+      input,
+      textarea,
+      select {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  nav {
+    width: 320px;
+    .Telefone {
+      display: none;
+    }
+  }
+  header {
+    .PodH {
+      width: 320px;
+    }
+    .OurWork {
+      flex-direction: column;
+      width: 200px;
+    }
+    img {
+      width: 300px;
+    }
+    .Sun {
+      margin-left: -10px;
+    }
+  }
+  .Cards {
+    justify-content: start;
+    .Card {
+      perspective: 100px;
+      font-size: 12px;
+      flex-direction: column;
+    }
+    img {
+      width: 300px;
+      height: 200px;
+    }
+  }
+  .Konec {
+    flex-direction: column;
+  }
+  .Card2 {
+    width: 200px;
+  }
+  .Podrobnee2 {
+    display: none;
+  }
+}
+
+.Error {
+  background: linear-gradient(to right, yellow, rgb(82, 253, 82));
+  width: 100%;
+  height: 100%;
+}
+.Arrow {
+  transform: rotate(90deg);
+  margin-top: -110px;
+  margin-bottom: 20px;
+}
+
+.Error404 {
+  width: 100%;
+  margin: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .ErrorText {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h1 {
+      font-size: 48px;
+      font-family: "Unbounded ExtraBold";
+    }
+    button {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 10px 30px;
+      border: 2px solid #172224;
+      @include BorderRadius(1);
+    }
+  }
+}
+
+.ErorCont {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  .Map {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, yellow, green);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, yellowgreen, darkgreen);
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .Card {
+    flex-direction: column;
+  }
+  footer {
+    .Konec {
+      .Logo {
+        display: none;
+      }
+    }
+  }
+  nav {
+    ul {
+      .FirstButton {
+        display: none;
+      }
+    }
+  }
+}

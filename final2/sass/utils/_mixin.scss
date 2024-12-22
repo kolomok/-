@@ -1,0 +1,19 @@
+@mixin BorderRadius($variant) {
+  @if $variant == 1 {
+    border-radius: 32px;
+  } @else if $variant == 2 {
+    border-radius: 30px;
+  } @else if $variant == 3 {
+    border-radius: 50%;
+  } @else if $variant == 4 {
+    border-radius: 27px;
+  } @else if $variant == 5 {
+    border-radius: 69px;
+  } @else if $variant == 6 {
+    border-radius: 5px;
+  } @else if $variant == 7 {
+    border-radius: 10px;
+  } @else if $variant == 8 {
+    border-radius: 20px;
+  }
+}

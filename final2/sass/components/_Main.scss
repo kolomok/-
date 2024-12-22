@@ -1,0 +1,581 @@
+main {
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.item {
+  padding: 20px;
+  @include BorderRadius(1);
+  color: #000;
+  font-size: 18px;
+}
+
+.moderation {
+  background: linear-gradient(to right, yellow, lightgreen);
+}
+
+.annotation {
+  border: 2px solid yellowgreen;
+  color: var(--c1);
+  grid-column: 2 span;
+  border-bottom: 0;
+}
+
+.data-collection {
+  background: linear-gradient(to right, lightgreen, aqua);
+}
+
+.synthetic-data {
+  background: linear-gradient(to right, yellow, lightgreen);
+  grid-column: 2 span;
+}
+
+.datasets {
+  border: 2px solid yellowgreen;
+  border-bottom: 0;
+  color: var(--c1);
+  grid-column: 2 span;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 3vw;
+  margin-bottom: 10px;
+  font-family: "Unbounded SemiBold";
+}
+
+.highlight {
+  color: var(--c4);
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.TextImg {
+  display: flex;
+  gap: 50px;
+  .Text {
+    width: 317px;
+  }
+}
+
+.SecondButton {
+  font-family: "Unbounded Regural";
+  margin-top: 50px;
+  justify-self: center;
+  border: 2px solid yellowgreen;
+  color: white;
+  padding: 15px 21px;
+  @include BorderRadius(2);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+  svg {
+    path {
+      fill: white;
+    }
+  }
+}
+
+.SecondButton::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 300px;
+  background: linear-gradient(to right, yellowgreen, aqua);
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: width 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.SecondButton:hover {
+  color: #2b3a25;
+  svg {
+    path {
+      fill: #2b3a25;
+    }
+  }
+}
+
+.SecondButton:hover::before {
+  width: 100%;
+}
+
+.Service,
+.Advantage {
+  font-size: 3vw;
+  font-weight: 800;
+  color: var(--c1);
+  margin: 50px 0px 30px 20px;
+  font-family: "Unbounded ExtraBold";
+}
+
+.AdvantageUl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: var(--c1);
+  font-size: 20px;
+  margin-top: 20px;
+  .Big {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    font-size: 7vw;
+    font-family: "Unbounded ExtraBold";
+  }
+  .Block {
+    background-color: var(--bg1);
+    width: 310px;
+    height: 200px;
+    margin-top: 15px;
+    padding: 30px 29px;
+    border: 2px solid yellowgreen;
+    border-bottom: 0;
+    @include BorderRadius(1);
+    font-family: "Mulish Regular";
+  }
+  .Icons {
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+  }
+}
+
+.timeline-container {
+  position: relative;
+  width: 90vw;
+  margin-top: 200px;
+  margin-left: 55px;
+  margin-bottom: 100px;
+  svg {
+    width: 85vw;
+  }
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  ul {
+    position: absolute;
+  }
+}
+
+/* Круг с иконкой */
+.circle1,
+.circle2,
+.circle3,
+.circle4,
+.circle5 {
+  width: 60px;
+  height: 60px;
+  @include BorderRadius(3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #2b3a25;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.circle1 {
+  background-color: #dbfb1d;
+  top: -100px;
+}
+
+.circle2 {
+  background-color: #bcfc17;
+  top: -165px;
+  left: 19.5vw;
+}
+
+.circle3 {
+  background-color: #9dfd10;
+  top: -100px;
+  left: 42.3vw;
+}
+
+.circle4 {
+  background-color: #7bfe0a;
+  top: -40px;
+  left: 62.5vw;
+}
+
+.circle5 {
+  background-color: #5eff04;
+  top: -100px;
+  left: 81.5vw;
+}
+
+/* Текст этапов */
+.step1,
+.step2,
+.step3,
+.step4,
+.step5 {
+  p {
+    text-align: center;
+    font-size: 14px;
+    max-width: 150px;
+    color: var(--c1);
+  }
+}
+
+.WorkCircle1 {
+  top: -45px;
+  left: -2.9vw;
+}
+
+.WorkCircle2 {
+  top: -235px;
+  left: 16.5vw;
+}
+
+.WorkCircle3 {
+  top: -45px;
+  left: 39.3vw;
+}
+.WorkCircle4 {
+  top: -90px;
+  left: 59.6vw;
+}
+
+.WorkCircle5 {
+  top: -45px;
+  left: 80.8vw;
+}
+
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  .Card {
+    background-color: var(--bg1);
+    // max-width: 728px;
+    display: flex;
+
+    flex-wrap: wrap;
+    margin-top: 20px;
+    color: var(--c1);
+    @include BorderRadius(1);
+    transition: 1s;
+    .CardTitle {
+      font-family: "Unbounded SemiBold";
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--c6);
+    }
+    .CardText {
+      height: 400px;
+      width: 344px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .Etc {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      max-width: 344px;
+      @include BorderRadius(1);
+    }
+  }
+}
+
+.Card:hover {
+  background-color: #353535;
+  transform: scale(1.02);
+}
+.Background1 {
+  box-shadow: 300px 300px 300px 300px yellowgreen;
+  margin-left: 80vw;
+  width: 0px;
+  height: 0px;
+}
+
+.Clin {
+  svg {
+    path {
+      fill: white;
+    }
+  }
+}
+
+.Cards2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .Card2 {
+    margin-top: 20px;
+    background-color: var(--bg1);
+    width: 483px;
+    height: 700px;
+    color: var(--c1);
+    @include BorderRadius(1);
+    .Podrobnee {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .CardTitle2 {
+      font-family: "Unbounded SemiBold";
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: var(--c6);
+      padding: 0px 20px;
+      height: 50px;
+    }
+    .Date {
+      margin: 20px 0px 20px 20px;
+    }
+    .CardText {
+      width: 389px;
+      height: 200px;
+      padding: 20px;
+    }
+    .Likes {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      align-items: center;
+      user-select: none;
+    }
+    .End {
+      padding: 0px 10px;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+      .End2 {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+    }
+  }
+  img {
+    @include BorderRadius(1);
+  }
+
+  .Likes {
+    color: white;
+  }
+
+  .Likes span:active {
+    color: red;
+  }
+}
+.Zayava {
+  margin-top: 100px;
+  background: linear-gradient(to right, yellowgreen, aqua);
+  width: 100%;
+  height: 100%;
+  @include BorderRadius(4);
+  display: flex;
+
+  .TextZayava {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-family: "Mulish Light";
+    font-size: 24px;
+    width: 250px;
+    margin: 20px;
+    color: var(--c7);
+    h1 {
+      font-size: 56px;
+      font-weight: 900;
+      color: var(--c7);
+      width: 300px;
+      font-family: "Unbounded ExtraBold";
+    }
+  }
+  .GirlInfo {
+    align-items: center;
+    margin: 100px 0px 0px 20px;
+    font-family: "Unbounded";
+    background-color: #fafafa;
+    width: 300px;
+    height: 60px;
+    @include BorderRadius(5);
+    overflow: hidden;
+    .GirlInfo2 {
+      margin: 5px;
+      display: flex;
+      justify-content: space-around;
+      img {
+        width: 100px;
+      }
+    }
+
+    li {
+      font-family: "Unbounded SemiBold";
+    }
+  }
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto) 1fr auto auto;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+  padding: 12px;
+  border: none;
+  @include BorderRadius(6);
+  font-size: 1em;
+  color: #fff;
+  background-color: #333;
+  box-sizing: border-box;
+  color: #888;
+}
+
+.name {
+  grid-column: 1 / 2;
+  border: 2px solid #00ff99;
+}
+
+.email {
+  grid-column: 2 / 3;
+}
+
+.phone {
+  grid-column: 3 / 4;
+}
+
+.position {
+  grid-column: 1 / 2;
+}
+
+.service {
+  grid-column: 2 / 4;
+}
+
+.project-info {
+  grid-column: 1 / 4;
+  height: 100px;
+  resize: none;
+}
+
+.submit-button {
+  grid-column: 1 / 2;
+  padding: 15px;
+  background-color: #ffffff;
+  font-family: "Unbounded Regural";
+  color: #333;
+  @include BorderRadius(2);
+  display: flex;
+  justify-content: space-around;
+}
+
+.privacy-text {
+  grid-column: 2 / 4;
+  font-size: 0.8em;
+  color: #aaa;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.ImgGirl {
+  display: none;
+}
+.Points {
+  display: none;
+  color: var(--c1);
+  font-size: 20px;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .circle {
+    background-color: #a0ff00;
+    width: 60px;
+    height: 60px;
+    @include BorderRadius(3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #2b3a25;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ImgGirl {
+    display: block;
+  }
+  .Points {
+    display: block;
+  }
+  .timeline-container {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 320px) {
+  .Advantage {
+    font-size: 20px;
+  }
+  .Cards2 {
+    .Card2 {
+      width: 200px;
+      height: 550px;
+      font-size: 10px;
+      img {
+        width: 200px;
+      }
+      .CardTitle2 {
+        font-size: 15px;
+      }
+      .CardText {
+        width: 200px;
+      }
+    }
+  }
+}
+.Ero {
+  display: flex;
+  align-items: center;
+  border: 2px solid #000;
+  @include BorderRadius(1);
+  width: 150px;
+  height: 50px;
+  justify-content: space-around;
+  font-family: "Unbounded Regural";
+}
